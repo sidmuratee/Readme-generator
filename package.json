@@ -1,0 +1,23 @@
+{
+  "name": "pro-readme-generator",
+  "version": "1.0.0",
+  "description": "## Table of Contents Table Of Contents",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sidmuratee/Readme-generator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sidmuratee/Readme-generator/issues"
+  },
+  "homepage": "https://github.com/sidmuratee/Readme-generator#readme",
+  "dependencies": {
+    "inquirer": "^8.2.4"
+  }
+}
