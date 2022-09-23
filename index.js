@@ -1,17 +1,6 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
 
-// let repoName = "Repo Name"
-// let tableOfContents = "Table Of Contents"
-// let description = "Description"
-// let installation = "Installation"
-// let usage = "Usage"
-// let test = "Test"
-// let contributors = "Contributors"
-// let license = "MIT"
-// let contact = "Contact"
-
-
 
 function generateLicenseBadge(license) {
     if (license === "MIT"){
