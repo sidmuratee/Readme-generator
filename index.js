@@ -4,15 +4,15 @@ const inquirer = require('inquirer');
 
 function generateLicenseBadge(license) {
     if (license === "MIT"){
-        return "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)"
-    else if (license === "Apache")
-    return "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
-    else if (license === "Mozilla")
-    return "[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)"
-    // if (license === "GNUGPL")
-    // return ""
+        return "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)"};
+    if (license === "Apache"){
+    return "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"};
+    if (license === "Mozilla"){
+    return "[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)"};
+    if (license === "Boost")
+    return "[![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)"
 
-}}
+}
 
 
 
@@ -58,7 +58,7 @@ inquirer
         type: 'list',
         message: 'Which license did you use?',
         name: 'license',
-        choices: ['MIT', 'Apache', 'Mozilla', 'GNUGPL'],
+        choices: ['MIT', 'Apache', 'Mozilla', 'Boost'],
     },
     {
         type: 'input',
