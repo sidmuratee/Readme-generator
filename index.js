@@ -25,11 +25,6 @@ inquirer
 
     },
     {
-        type: 'validate',
-        message: 'Would you like a Table of Contents?',
-        name: 'TableOfContents',
-    },
-    {
         type: 'input',
         message: 'Would you like a description?',
         name: 'Description',
@@ -62,17 +57,21 @@ inquirer
     },
     {
         type: 'input',
-        message: 'would you like to add any contact info?',
-        name: 'ContactInfo',
+        message: 'would you like to add your Github?',
+        name: 'Github',
+    },
+    {
+        type: 'input',
+        message: 'Would you like to add your email?',
+        name: 'email',
     },
     
     
 ]).then((responses)=> {
     let readMeText = `
-    # ${responses.RepoName}
+# ${responses.RepoName}
     
-    ## Table of Contents
-    ${responses.TableOfContents}
+## Table of Contents
 * [description](description)
 * [installation](#installation)
 * [usage](#usage)
@@ -101,7 +100,8 @@ inquirer
     
     
     ## Contact
-    ${responses.ContactInfo}`
+    For any questions, please reach out to me at https://github.com/${responses.Github}
+    or e-mail me at ${responses.email}`
 
     fs.writeFile("read.md", readMeText, function (err) {
 
@@ -110,18 +110,6 @@ inquirer
 
     })
 });
-
-// function init() {
-//     inquirer.prompt(questions).then((answers) => {
-//         fs.writeFile("readme.md", readMeText(answers), function (err) {
-//             if (err) console.log(err);
-//         });
-//     });
-// }
-
-// init();
-
-
 
 // GIVEN a command-line application that accepts user input
 // WHEN I am prompted for information about my application repository
